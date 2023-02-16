@@ -5,16 +5,24 @@ export default function Navbar() {
 
   return (
     <nav>
-      <h2 className="logo">Body Shop</h2>
+      <img
+        onClick={() => navigate("/")}
+        className="logo"
+        src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/11/18/1321635230563/The-Body-Shop-logo-007.jpg?width=465&quality=85&dpr=1&s=none"
+        width="50px"
+        height="50px"
+      />
 
-      <div className="far-right">
-        <h3 className="home-btn" onClick={() => navigate("/")}>
+      <div className="btn-container">
+        <button className="btn" onClick={() => navigate("/")}>
           Home
-        </h3>
-        <button className="about-btn" onClick={() => navigate("/about")}>
-          About Me
+        </button>
+        <br />
+        <button className="btn" onClick={() => navigate("/about")}>
+          About
         </button>
       </div>
     </nav>
+
   );
 }

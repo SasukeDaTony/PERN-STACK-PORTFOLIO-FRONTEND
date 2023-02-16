@@ -6,13 +6,15 @@ import NewTreatment from "./Components/NewTreatment.js";
 import Confirm from "./Components/Confirm.js";
 import EditPage from "./Components/EditPage";
 import About from "./Components/About.js";
+import LandingPage from "./Components/LandingPage.js";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<IndexPage />}></Route>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/treatments" element={<IndexPage />} />
         <Route path="/treatments/:id" element={<ViewPage />} />
         <Route path="/new-treatment" element={<NewTreatment />} />
         <Route path="/new-treatment/confirmation" element={<Confirm />} />

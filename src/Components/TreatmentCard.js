@@ -7,20 +7,22 @@ export default function TreatmentCard({ treatment }) {
       className="treatment-card"
       onClick={() => navigate(`/treatments/${treatment.id}`)}
     >
-     <div className="treatment-container">
-     <h3>{treatment.name} : ${treatment.price}</h3>
-     <img
+      <div className="treatment-container">
+        <h3>
+          {treatment.name} : ${treatment.price}
+        </h3>
+        <img
           src={treatment.treatment_image}
           alt="therapist"
           className="img-therapist"
           width="350px"
           height="250px"
         />
-     </div>
-
+      </div>
 
       <div className="img-container">
-        
+        <span className="thpst">Therapist : {treatment.therapist}</span>
+        <br />
         <img
           src={treatment.therapist_image}
           alt="therapist"
@@ -28,8 +30,6 @@ export default function TreatmentCard({ treatment }) {
           width="100px"
           height="100px"
         />
-        <br />
-        Designated Therapist : {treatment.therapist}
       </div>
     </div>
   );

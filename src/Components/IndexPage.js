@@ -10,18 +10,20 @@ export default function IndexPage() {
 
   useEffect(() => {
     axios.get(`${API}treatments`).then((res) => setTreatments(res.data));
-  });
+  },[]);
+
 
   const navigate = useNavigate();
 
   return (
     <div className="index">
+      <br/>
       <button className="new-btn" onClick={() => navigate("/new-treatment")}>
         Add A New Treatment
       </button>
       <div className="index-grid">
         {treatments.map((treatment) => {
-          return <TreatmentCard treatment={treatment} />;
+          return <TreatmentCard treatment={treatment} key={treatment.id} />;
         })}
       </div>
     </div>
