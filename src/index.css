@@ -18,6 +18,7 @@ body {
 }
 
 .btn-container {
+  opacity: 75%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column: 7/1;
@@ -25,7 +26,7 @@ body {
 }
 
 .btn-hme {
-  margin-left: 7px;
+  margin-left: 15px;
 }
 
 .thpst {
@@ -57,17 +58,25 @@ body {
 }
 
 .form {
+  margin-left: 30px;
   display: grid;
-  width: 100%;
   margin-bottom: 5px;
   padding: 20px 15px;
   border: 1px solid black;
   margin-right: 50px;
-  background-color: rgb(28, 101, 138);
+  background-image: url("http://img1.wsimg.com/isteam/stock/jpwgK2z");
+  background-size: contain;
   opacity: 85%;
   font-weight: 600;
   font-style: oblique;
-  color: rgb(48, 184, 41);
+  color: rgb(61, 45, 0);
+  width: 500px;
+}
+
+.form-grid .form-div .form label {
+  background-color: blanchedalmond;
+  opacity: 65%;
+  width: fit-content;
 }
 
 .inputs {

@@ -27,7 +27,7 @@ export default function NewTreatment() {
   }
   return (
     <div className="form-grid">
-      <h2>New Treatment Form</h2> <br/>
+      <h2>New Treatment Form</h2>
       <div className="form-div">
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
           <label htmlFor="name">Treatment Name:</label>
@@ -100,7 +100,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
           <br />
-          <button type="submit">Submit</button>
+          <button className="btn" type="submit">Submit</button>
         </form>
       </div>
     </div>

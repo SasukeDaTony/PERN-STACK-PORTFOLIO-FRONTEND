@@ -100,7 +100,9 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
           <br />
-          <button type="submit">Submit</button>
+          <button className="btn" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>
