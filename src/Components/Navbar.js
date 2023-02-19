@@ -12,17 +12,18 @@ export default function Navbar() {
         width="50px"
         height="50px"
       />
-
       <div className="btn-container">
-        <button className="btn" onClick={() => navigate("/")}>
-          Home
+      <button className="btn btn-hme" onClick={() => navigate("/")}>
+        Home
+      </button>
+        <button className="btn" onClick={() => navigate("/treatments")}>
+          Treatments
         </button>
-        <br />
         <button className="btn" onClick={() => navigate("/about")}>
           About
         </button>
       </div>
+     
     </nav>
-
   );
 }

@@ -27,7 +27,7 @@ export default function NewTreatment() {
   }
   return (
     <div className="form-grid">
-      <h2>New Treatment Form</h2>
+      <h2>New Treatment Form</h2> <br/>
       <div className="form-div">
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
           <label htmlFor="name">Treatment Name:</label>

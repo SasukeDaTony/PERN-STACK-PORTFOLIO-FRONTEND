@@ -20,8 +20,12 @@ body {
 .btn-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column: 7/9;
+  grid-column: 7/1;
   align-items: center;
+}
+
+.btn-hme {
+  margin-left: 7px;
 }
 
 .thpst {
@@ -41,14 +45,12 @@ body {
 }
 
 .btn:hover,
-.new-btn:hover,
-.button:hover {
+.new-btn:hover {
   color: floralwhite;
 }
 
 .btn,
-.new-btn,
-.button {
+.new-btn {
   color: rgb(5, 126, 142);
   background-color: black;
   max-width: min-content;
@@ -86,9 +88,7 @@ body {
 }
 
 nav {
-  align-content: center;
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(8, 1fr);
   background-size: cover;
   background-image: url("https://thumbs.dreamstime.com/b/vibrant-sunset-beach-26105175.jpg");
@@ -141,4 +141,15 @@ nav {
   background-color: rgb(88, 152, 182);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   opacity: 75%;
+}
+.confirmation {
+  padding-bottom: 200px;
+  background-image: url("https://media.istockphoto.com/id/1202194398/vector/colorful-vector-firework-on-dark-blue-background.jpg?s=612x612&w=0&k=20&c=UswGsH6n9zZ7_OIujMfZ6x__xelkNpyKriMUgCduZ40=");
+  text-align: center;
+}
+.confirmation h3 {
+  background-color: rgb(3, 3, 1);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-decoration: underline;
+  color: gold;
 }
