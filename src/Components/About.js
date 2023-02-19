@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="about">
-      <h1>Portfolio Project Showcase : The Body Shop</h1>
+      <h1>Showcase : The Body Shop Spa</h1>
       <div className="tony">
         <h3>Anthony Taylor</h3>
         <img src="/profile.png" alt="profile" width="200px" height="200px" />

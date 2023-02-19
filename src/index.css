@@ -116,16 +116,16 @@ nav {
 }
 
 .about {
-  display: flexbox;
-  background-color: rgb(196, 188, 176);
-  justify-content: center;
+  margin-left:35%;
+  background-color: rgb(42, 118, 121);
   text-align: center;
-  width: 5;
+  width: 400px;
 }
 
 .title {
-  color: rgb(5, 126, 142);
-  background-color: rgb(239, 232, 232);
+  color: rgb(30, 58, 126);
+  background-image: url("https://as1.ftcdn.net/v2/jpg/05/03/89/74/1000_F_503897413_5SLWZOElWg4EsWEsUP1PUx9F50tTlYFB.jpg");
+  background-size: contain;
 }
 
 .view-container {

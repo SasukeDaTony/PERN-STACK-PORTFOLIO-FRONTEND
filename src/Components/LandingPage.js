@@ -5,7 +5,7 @@ export default function LandingPage() {
 
   return (
     <div className="landing">
-      <h1 className="title">Welcome To Tony's Body Shop Spa</h1>
+      <h1 className="title">The Body Shop Spa</h1>
       <img
         width="500px"
         height="500px"

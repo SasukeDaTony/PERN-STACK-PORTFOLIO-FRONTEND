@@ -42,24 +42,24 @@ export default function ViewPage() {
           </div>
           <div className="view-bot">
             {" "}
-            <p>Price: ${treatment.price}</p>
-            <p>Category: {treatment.category}</p>
+            <p><b>Price:</b> ${treatment.price}</p>
+            <p><b>Category:</b> {treatment.category}</p>
             <p>
             {treatment.description}
             </p>
           
             <img src={treatment.therapist_image} width="100px" height="100px" />
-            <p>Therapist: {treatment.therapist}</p>{" "}
+            <p><b>Therapist:</b> {treatment.therapist}</p>{" "}
           </div>
 
           <button
-            className="button"
+            className="btn"
             onClick={() => navigate(`/treatments/${id}/edit`)}
           >
             Edit
           </button>
 
-          <button className="button" onClick={() => handleDelete(id)}>
+          <button className="btn" onClick={() => handleDelete(id)}>
             Delete
           </button>
         </div>
