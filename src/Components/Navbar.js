@@ -11,6 +11,8 @@ export default function Navbar() {
     axios.get(`${API}treatments`).then((res) => setTreatments(res.data));
   }, []);
 
+  console.log(treatments);
+
   const navigate = useNavigate();
 
   return (
