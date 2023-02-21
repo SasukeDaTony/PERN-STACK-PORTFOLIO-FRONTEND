@@ -15,26 +15,16 @@ body {
   opacity: 0.5;
 }
 
-.img-container img {
-}
-
 .nav-container {
   justify-content: space-between;
-  align-items: end;
   display: flex;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  /* display: grid; */
-  /* grid-template-columns: repeat(8, 1fr);  */
   background-image: url("http://llw-magento-images-prod.s3.amazonaws.com/catalog/product/w/m/wm107919314.jpg");
 }
 .btn-container {
   opacity: 75%;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column: 7/1; */
-  align-items: center;
 }
 
 img.logo {
@@ -46,12 +36,12 @@ img.logo {
 .land-img {
   border-radius: 50%;
 }
-.drop-container {
+/* .drop-container {
 }
 
 .btn-hme {
-  /* margin-left: 15px; */
-}
+
+} */
 
 .thpst {
   background-color: cornsilk;
@@ -148,7 +138,7 @@ img.logo {
 }
 
 .drop-container {
-  display: inline-block;
+  align-self: flex-end;
 }
 
 .drop-container label {
@@ -179,9 +169,9 @@ img.logo {
   background-color: rgb(42, 118, 121);
   text-align: center;
 }
- .about img {
+.about img {
   border-radius: 10px;
- }
+}
 
 .title {
   color: rgb(30, 58, 126);
