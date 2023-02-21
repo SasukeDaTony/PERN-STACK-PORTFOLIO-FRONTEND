@@ -48,7 +48,7 @@ export default function ViewPage() {
             {treatment.description}
             </p>
           
-            <img src={treatment.therapist_image} width="100px" height="100px" />
+            <img alt="therapist" src={treatment.therapist_image} width="100px" height="100px" />
             <p><b>Therapist:</b> {treatment.therapist}</p>{" "}
           </div>
 

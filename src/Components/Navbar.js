@@ -11,6 +11,7 @@ export default function Navbar() {
         src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/11/18/1321635230563/The-Body-Shop-logo-007.jpg?width=465&quality=85&dpr=1&s=none"
         width="50px"
         height="50px"
+        alt="logo"
       />
       <div className="btn-container">
       <button className="btn btn-hme" onClick={() => navigate("/")}>
