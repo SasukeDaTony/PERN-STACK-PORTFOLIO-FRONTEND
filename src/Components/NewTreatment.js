@@ -23,14 +23,16 @@ export default function NewTreatment() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    axios.post(`${API}treatments`, newTreatment).then(() => navigate("/new-treatment/confirmation"));
+    axios
+      .post(`${API}treatments`, newTreatment)
+      .then(() => navigate("/new-treatment/confirmation"));
   }
   return (
     <div className="form-grid">
       <h2>New Treatment Form</h2>
       <div className="form-div">
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
-          <label htmlFor="name">Treatment Name:</label>
+          <label htmlFor="name">Treatment Name &nbsp;</label>
           <input
             type="text"
             required
@@ -40,7 +42,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="treatment_image">Treatment Image URL:</label>
+          <label htmlFor="treatment_image">Treatment Image URL &nbsp;</label>
           <input
             type="text"
             required
@@ -50,7 +52,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="category">Category:</label>
+          <label htmlFor="category">Category &nbsp; </label>
           <input
             type="text"
             required
@@ -60,7 +62,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description">Description &nbsp; </label>
           <input
             type="text"
             required
@@ -70,7 +72,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="price">Price:</label>
+          <label htmlFor="price">Price &nbsp;</label>
           <input
             type="number"
             required
@@ -80,7 +82,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="therapist">Designated Therapist:</label>
+          <label htmlFor="therapist">Designated Therapist &nbsp; </label>
           <input
             type="text"
             required
@@ -90,7 +92,7 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="therapist_image">Therapist Image URL:</label>
+          <label htmlFor="therapist_image">Therapist Image URL &nbsp; </label>
           <input
             type="text"
             required
@@ -100,7 +102,9 @@ export default function NewTreatment() {
             onChange={(e) => handleChange(e)}
           />
           <br />
-          <button className="btn" type="submit">Submit</button>
+          <button className="btn" type="submit">
+            Submit
+          </button>
         </form>
       </div>
     </div>

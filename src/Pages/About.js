@@ -1,11 +1,11 @@
 export default function About() {
   return (
     <div className="about">
-      <h1>Showcase : The Body Shop Spa</h1>
+      <h2>The Body Shop Spa</h2>
       <div className="tony">
         <h3>Anthony Taylor</h3>
         <img src="/profile.png" alt="profile" width="200px" height="200px" />
-        <p>
+        <p >
           I began a career in technology by obtaining a COMPTIA Network+
           certification. This led me to become an associate at Geek Squad for
           three years. I eventually steered towards the installation Mobile

@@ -4,17 +4,14 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_BASE_URL;
 
-export default function ViewPage() {
+export default function Details() {
   const navigate = useNavigate();
   const [treatment, setTreatment] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
-    console.log(API);
     axios.get(`${API}treatments/${id}`).then((res) => setTreatment(res.data));
   }, [id]);
-
-  console.log(treatment);
 
   function handleDelete(id) {
     axios
@@ -42,14 +39,22 @@ export default function ViewPage() {
           </div>
           <div className="view-bot">
             {" "}
-            <p><b>Price:</b> ${treatment.price}</p>
-            <p><b>Category:</b> {treatment.category}</p>
             <p>
-            {treatment.description}
+              <b>Price:</b> ${treatment.price}
             </p>
-          
-            <img alt="therapist" src={treatment.therapist_image} width="100px" height="100px" />
-            <p><b>Therapist:</b> {treatment.therapist}</p>{" "}
+            <p>
+              <b>Category:</b> {treatment.category}
+            </p>
+            <p>{treatment.description}</p>
+            <img
+              alt="therapist"
+              src={treatment.therapist_image}
+              width="100px"
+              height="100px"
+            />
+            <p>
+              <b>Therapist:</b> {treatment.therapist}
+            </p>{" "}
           </div>
 
           <button

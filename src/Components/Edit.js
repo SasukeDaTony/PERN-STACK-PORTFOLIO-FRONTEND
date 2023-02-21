@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_BASE_URL;
 
-export default function EditPage() {
+export default function Edit() {
   const [updateTreatment, setUpdateTreatment] = useState([]);
   const navigate = useNavigate();
   const { id } = useParams();
@@ -30,7 +30,7 @@ export default function EditPage() {
       <h2> Update Treatment Form</h2>
       <div className="form-div">
         <form className="form" onSubmit={(e) => handleSubmit(e)}>
-          <label htmlFor="name">Treatment Name:</label>
+          <label htmlFor="name">Treatment Name &nbsp;</label>
           <input
             type="text"
             required
@@ -40,7 +40,7 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="treatment_image">Treatment Image URL:</label>
+          <label htmlFor="treatment_image">Treatment Image URL &nbsp;</label>
           <input
             type="text"
             required
@@ -50,7 +50,7 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="category">Category:</label>
+          <label htmlFor="category">Category &nbsp;</label>
           <input
             type="text"
             required
@@ -60,7 +60,7 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description">Description &nbsp;</label>
           <input
             type="text"
             required
@@ -70,7 +70,7 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="price">Price:</label>
+          <label htmlFor="price">Price </label>
           <input
             type="number"
             required
@@ -80,7 +80,7 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="therapist">Designated Therapist:</label>
+          <label htmlFor="therapist">Designated Therapist &nbsp;</label>
           <input
             type="text"
             required
@@ -90,7 +90,7 @@ export default function EditPage() {
             onChange={(e) => handleChange(e)}
           />
 
-          <label htmlFor="therapist_image">Therapist Image URL:</label>
+          <label htmlFor="therapist_image">Therapist Image URL &nbsp;</label>
           <input
             type="text"
             required

@@ -1,28 +1,33 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import IndexPage from "./Components/IndexPage";
-import ViewPage from "./Components/ViewPage";
-import NewTreatment from "./Components/NewTreatment.js";
-import Confirm from "./Components/Confirm.js";
-import EditPage from "./Components/EditPage";
-import About from "./Components/About.js";
-import LandingPage from "./Components/LandingPage.js";
 
+//COMPONENTS
+import Navbar from "./Components/Navbar";
+import Confirm from "./Components/Confirm.js";
+import About from "./Pages/About.js";
+
+//PAGES
+import EditForm from "./Pages/EditForm";
+import Landing from "./Pages/Landing.js";
+import Index from "./Pages/Index";
+import Show from "./Pages/Show";
+import NewForm from "./Pages/NewForm";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/treatments" element={<IndexPage />} />
-        <Route path="/treatments/:id" element={<ViewPage />} />
-        <Route path="/new-treatment" element={<NewTreatment />} />
-        <Route path="/new-treatment/confirmation" element={<Confirm />} />
-        <Route path="/treatments/:id/edit" element={<EditPage />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
+    <div className="app">
+      <Router>
+        <Navbar />
+        <Routes> 
+            <Route path="/" element={<Landing />} />
+            <Route path="/treatments" element={<Index />} />
+            <Route path="/treatments/:id" element={<Show />} />
+            <Route path="/new-treatment" element={<NewForm />} />
+            <Route path="/new-treatment/confirmation" element={<Confirm />} />
+            <Route path="/treatments/:id/edit" element={<EditForm />} />
+            <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

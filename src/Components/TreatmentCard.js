@@ -22,8 +22,7 @@ export default function TreatmentCard({ treatment }) {
 
       <div className="img-container">
         <span className="thpst">Therapist : {treatment.therapist}</span>
-        <br />
-        <img
+       <br /> <img
           src={treatment.therapist_image}
           alt="therapist"
           className="img-therapist"
