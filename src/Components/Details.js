@@ -14,12 +14,10 @@ export default function Details({ setDropDwn }) {
   }, [id]);
 
   function handleDelete(id) {
-  
     axios
       .delete(`${API}treatments/${id}`)
       .then(() => {
         navigate("/treatments");
-        setDropDwn(false);
       })
       .catch((error) => console.log(error));
   }
@@ -63,7 +61,6 @@ export default function Details({ setDropDwn }) {
             className="btn"
             onClick={() => {
               navigate(`/treatments/${id}/edit`);
-              setDropDwn(false);
             }}
           >
             Edit
