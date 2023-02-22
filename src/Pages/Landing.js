@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 
-export default function Landing() {
+export default function Landing({ setDropDwn }) {
   const navigate = useNavigate();
 
   return (
@@ -14,7 +14,13 @@ export default function Landing() {
         alt="logo"
       />
       <br />
-      <button className="btn" onClick={() => navigate("/treatments")}>
+      <button
+        className="btn"
+        onClick={() => {
+          navigate("/treatments");
+          setDropDwn(true);
+        }}
+      >
         Go To All Treatments
       </button>
     </div>

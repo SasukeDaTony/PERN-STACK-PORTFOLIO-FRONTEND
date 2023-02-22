@@ -1,12 +1,15 @@
 import { useNavigate } from "react-router-dom";
 
-export default function TreatmentCard({ treatment }) {
+export default function TreatmentCard({ treatment, setDropDwn }) {
   const navigate = useNavigate();
+
+  function handleOnClick() {
+    navigate(`/treatments/${treatment.id}`);
+    setDropDwn(false);
+  }
+
   return (
-    <div
-      className="treatment-card"
-      onClick={() => navigate(`/treatments/${treatment.id}`)}
-    >
+    <div className="treatment-card" onClick={handleOnClick}>
       <div className="treatment-container">
         <h3>
           {treatment.name} : ${treatment.price}
@@ -22,7 +25,8 @@ export default function TreatmentCard({ treatment }) {
 
       <div className="img-container">
         <span className="thpst">Therapist : {treatment.therapist}</span>
-       <br /> <img
+        <br />{" "}
+        <img
           src={treatment.therapist_image}
           alt="therapist"
           className="img-therapist"

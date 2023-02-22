@@ -17,6 +17,7 @@ import NewForm from "./Pages/NewForm";
 const API = process.env.REACT_APP_BASE_URL;
 
 function App() {
+  const [dropDwn, setDropDwn] = useState(false);
   const [treatments, setTreatments] = useState([]);
 
   useEffect(() => {
@@ -26,16 +27,16 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <Navbar setTreatments={setTreatments} />
+        <Navbar setTreatments={setTreatments} dropDwn={dropDwn} setDropDwn={setDropDwn}/>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Landing setDropDwn={setDropDwn}/>} />
           <Route
             path="/treatments"
-            element={<Index treatments={treatments} />}
+            element={<Index treatments={treatments} setDropDwn={setDropDwn}/>}
           />
-          <Route path="/treatments/:id" element={<Show />} />
+          <Route path="/treatments/:id" element={<Show setDropDwn={setDropDwn}/>} />
           <Route path="/new-treatment" element={<NewForm />} />
-          <Route path="/new-treatment/confirmation" element={<Confirm />} />
+          <Route path="/new-treatment/confirmation" element={<Confirm setDropDwn={setDropDwn}/>} />
           <Route path="/treatments/:id/edit" element={<EditForm />} />
           <Route path="/about" element={<About />} />
         </Routes>

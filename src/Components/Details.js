@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_BASE_URL;
 
-export default function Details() {
+export default function Details({ setDropDwn }) {
   const navigate = useNavigate();
   const [treatment, setTreatment] = useState([]);
   const { id } = useParams();
@@ -14,10 +14,12 @@ export default function Details() {
   }, [id]);
 
   function handleDelete(id) {
+  
     axios
       .delete(`${API}treatments/${id}`)
       .then(() => {
         navigate("/treatments");
+        setDropDwn(false);
       })
       .catch((error) => console.log(error));
   }
@@ -59,7 +61,10 @@ export default function Details() {
 
           <button
             className="btn"
-            onClick={() => navigate(`/treatments/${id}/edit`)}
+            onClick={() => {
+              navigate(`/treatments/${id}/edit`);
+              setDropDwn(false);
+            }}
           >
             Edit
           </button>
