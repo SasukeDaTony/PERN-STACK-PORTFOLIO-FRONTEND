@@ -20,10 +20,6 @@ const API = process.env.REACT_APP_BASE_URL;
 function App() {
   const [treatments, setTreatments] = useState([]);
 
-  useEffect(() => {
-    axios.get(`${API}treatments`).then((res) => setTreatments(res.data));
-  }, []);
-
   return (
     <div className="app">
       <Router>
@@ -32,7 +28,9 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route
             path="/treatments"
-            element={<Index treatments={treatments} />}
+            element={
+              <Index treatments={treatments} setTreatments={setTreatments} />
+            }
           />
           <Route path="/treatments/:id" element={<Show />} />
           <Route path="/new-treatment" element={<NewForm />} />

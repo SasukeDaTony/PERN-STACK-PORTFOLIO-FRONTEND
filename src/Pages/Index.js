@@ -1,6 +1,13 @@
 import Treatments from "../Components/Treatments";
+import { useEffect } from "react";
+import axios from "axios";
 
-function Index( {treatments} ) {
+const API = process.env.REACT_APP_BASE_URL;
+
+function Index({ treatments, setTreatments }) {
+  useEffect(() => {
+    axios.get(`${API}treatments`).then((res) => setTreatments(res.data));
+  }, []);
   return (
     <div className="index">
       <Treatments treatments={treatments} />

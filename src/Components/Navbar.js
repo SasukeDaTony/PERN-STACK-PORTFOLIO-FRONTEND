@@ -38,7 +38,18 @@ export default function Navbar({ setTreatments }) {
           >
             Home
           </button>
-          <button className="btn" onClick={() => navigate("/treatments")}>
+          <button
+            className="btn"
+            onClick={() => {
+              if (location.pathname === "/treatments") {
+                axios.get(`${API}treatments`).then((res) => {
+                  setTreatments(res.data);
+                });
+              } else {
+                navigate("/treatments");
+              }
+            }}
+          >
             Treatments
           </button>
           <button
