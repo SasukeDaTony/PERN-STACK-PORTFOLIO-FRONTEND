@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
+
 
 //COMPONENTS
 import Navbar from "./Components/Navbar";
@@ -15,7 +15,6 @@ import Show from "./Pages/Show";
 import NewForm from "./Pages/NewForm";
 import FourOFour from "./Pages/FourOFour";
 
-const API = process.env.REACT_APP_BASE_URL;
 
 function App() {
   const [treatments, setTreatments] = useState([]);
