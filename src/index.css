@@ -16,6 +16,7 @@ body {
 }
 
 .nav-container {
+  padding-bottom: 1%;
   justify-content: space-between;
   display: flex;
   background-repeat: no-repeat;
@@ -30,7 +31,7 @@ body {
 img.logo {
   border-radius: 50%;
   margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 60px;
 }
 
 .land-img {
@@ -165,6 +166,7 @@ img.logo {
 }
 
 .about {
+ 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(42, 118, 121);
   text-align: center;

@@ -1,19 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useState, useEffect } from "react";
 
 const API = process.env.REACT_APP_BASE_URL;
 
-export default function Navbar() {
-  const [treatments, setTreatments] = useState([]);
-
-  useEffect(() => {
-    axios.get(`${API}treatments`).then((res) => setTreatments(res.data));
-  }, []);
-
-  console.log(treatments);
+export default function Navbar( {setTreatments} ) {
 
   const navigate = useNavigate();
+
+  function handleChange(e) {
+    axios.get(`${API}treatments?category=${e.target.value}`).then((res) => {
+      setTreatments(res.data);
+    });
+  };
 
   return (
     <div className="nav-container">
@@ -43,7 +41,7 @@ export default function Navbar() {
       </nav>
       <div className="drop-container">
         <label htmlFor="drop">Categories :&nbsp;</label>
-        <select id="drop" name="drop">
+        <select onChange={handleChange} id="drop" name="drop">
           <option value=""></option>
           <option value="Facials">Facials</option>
           <option value="Body Treatments">Body Treatments</option>

@@ -1,9 +1,9 @@
 import Treatments from "../Components/Treatments";
 
-function Index() {
+function Index( {treatments} ) {
   return (
     <div className="index">
-      <Treatments />
+      <Treatments treatments={treatments} />
     </div>
   );
 }
