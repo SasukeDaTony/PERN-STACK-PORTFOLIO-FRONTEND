@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-export default function TreatmentCard({ treatment, setDropDwn }) {
+export default function TreatmentCard({ treatment }) {
   const navigate = useNavigate();
 
   function handleOnClick() {
     navigate(`/treatments/${treatment.id}`);
-    setDropDwn(false);
+
   }
 
   return (

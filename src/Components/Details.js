@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_BASE_URL;
 
-export default function Details({ setDropDwn }) {
+export default function Details() {
   const navigate = useNavigate();
   const [treatment, setTreatment] = useState([]);
   const { id } = useParams();

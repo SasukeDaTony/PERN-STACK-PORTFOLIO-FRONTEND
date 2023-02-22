@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const API = process.env.REACT_APP_BASE_URL;
 
-export default function Navbar({ setTreatments, dropDwn, setDropDwn }) {
+export default function Navbar({ setTreatments }) {
   const navigate = useNavigate();
+  const location = useLocation();
 
   function handleChange(e) {
     axios.get(`${API}treatments?category=${e.target.value}`).then((res) => {
@@ -19,7 +21,6 @@ export default function Navbar({ setTreatments, dropDwn, setDropDwn }) {
           <img
             onClick={() => {
               navigate("/");
-              setDropDwn(false);
             }}
             className="logo"
             src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2011/11/18/1321635230563/The-Body-Shop-logo-007.jpg?width=465&quality=85&dpr=1&s=none"
@@ -33,32 +34,24 @@ export default function Navbar({ setTreatments, dropDwn, setDropDwn }) {
             className="btn"
             onClick={() => {
               navigate("/");
-              setDropDwn(false);
             }}
           >
             Home
           </button>
-          <button
-            className="btn"
-            onClick={() => {
-              navigate("/treatments");
-              setDropDwn(true);
-            }}
-          >
+          <button className="btn" onClick={() => navigate("/treatments")}>
             Treatments
           </button>
           <button
             className="btn"
             onClick={() => {
               navigate("/about");
-              setDropDwn(false);
             }}
           >
             About
           </button>
         </div>
       </nav>
-      {dropDwn === true ? (
+      {location.pathname === "/treatments" ? (
         <div className="drop-container">
           <label htmlFor="drop">Categories :&nbsp;</label>
           <select onChange={handleChange} id="drop" name="drop">
@@ -73,7 +66,6 @@ export default function Navbar({ setTreatments, dropDwn, setDropDwn }) {
               className="new-btn"
               onClick={() => {
                 navigate("/new-treatment");
-                setDropDwn(false);
               }}
             >
               Add New Treatment

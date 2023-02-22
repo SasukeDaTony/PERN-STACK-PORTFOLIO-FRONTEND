@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 
-export default function Confirm( { setDropDwn } ) {
+export default function Confirm() {
   const navigate = useNavigate();
   return (
     <div className="confirmation">
@@ -15,7 +15,6 @@ export default function Confirm( { setDropDwn } ) {
       
       <button className="btn" onClick={() => {
         navigate("/treatments")
-        setDropDwn(true);
         }}>
         Back To Treatments
       </button>

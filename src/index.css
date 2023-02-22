@@ -1,6 +1,6 @@
 body {
   font-family: cursive;
-  background-color: black;
+  background-color: rgb(74, 110, 47);
   font-weight: bolder;
   font-size: x-large;
 }
@@ -37,12 +37,7 @@ img.logo {
 .land-img {
   border-radius: 50%;
 }
-/* .drop-container {
-}
 
-.btn-hme {
-
-} */
 
 .thpst {
   background-color: cornsilk;
@@ -166,7 +161,6 @@ img.logo {
 }
 
 .about {
- 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(42, 118, 121);
   text-align: center;
@@ -175,6 +169,10 @@ img.logo {
   border-radius: 10px;
 }
 
+#abt {
+  margin-left: 5%;
+ width: 85%;
+}
 .title {
   color: rgb(30, 58, 126);
   background-image: url("https://as1.ftcdn.net/v2/jpg/05/03/89/74/1000_F_503897413_5SLWZOElWg4EsWEsUP1PUx9F50tTlYFB.jpg");
@@ -214,4 +212,8 @@ img.logo {
   font-family: cursive;
   text-decoration: underline;
   color: gold;
+}
+
+.error {
+  text-align: center;
 }

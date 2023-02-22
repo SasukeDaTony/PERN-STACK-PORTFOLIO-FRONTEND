@@ -5,7 +5,7 @@ export default function About() {
       <div className="tony">
         <h3>Anthony Taylor</h3>
         <img src="/profile.png" alt="profile" width="200px" height="200px" />
-        <p >
+        <div id="abt"> <p >
           I began a career in technology by obtaining a COMPTIA Network+
           certification. This led me to become an associate at Geek Squad for
           three years. I eventually steered towards the installation Mobile
@@ -18,7 +18,8 @@ export default function About() {
           <a href="https://www.linkedin.com/in/tonytaylor91/">LinkedIn</a>{" "}
           <br />
           EMAIL: TonyTaylor@pursuit.org. <br />
-        </p>
+        </p></div>
+       
       </div>
     </div>
   );
