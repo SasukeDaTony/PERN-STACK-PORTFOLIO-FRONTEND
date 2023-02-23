@@ -8,6 +8,7 @@ function Index({ treatments, setTreatments }) {
   useEffect(() => {
     axios.get(`${API}treatments`).then((res) => setTreatments(res.data));
   }, [setTreatments]);
+
   return (
     <div className="index">
       <Treatments treatments={treatments} />
